@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eBike Sport Shop</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <div class="profile">
+                <img src="images/profile.jpg" alt="Profile" class="profile-img">
+            </div>
+            <div class="cart-icon" id="cartIcon" onclick="openCart()">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="9" cy="21" r="1"></circle>
+                    <circle cx="20" cy="21" r="1"></circle>
+                    <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                </svg>
+                <span class="cart-badge" id="cartBadge">0</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Products Grid -->
+    <main class="main-content">
+        <h2 class="section-title">Choose Your eBike Type</h2>
+        <div class="products-grid" id="productsGrid"></div>
+    </main>
+
+    <!-- Cart Drawer -->
+    <div class="cart-overlay" id="cartOverlay" onclick="closeCartDrawer()"></div>
+    <div class="cart-drawer" id="cartDrawer">
+        <div class="cart-header">
+            <h2>Your Cart</h2>
+            <button class="close-btn" onclick="closeCartDrawer()">&times;</button>
+        </div>
+        <div class="cart-items" id="cartItems"></div>
+        <div class="cart-footer">
+            <div class="payment-option">
+                <input type="checkbox" id="buyNowPayLater">
+                <label for="buyNowPayLater">Buy Now Pay Later eBike</label>
+            </div>
+            <button class="checkout-btn" onclick="checkout()">Complete Your Order</button>
+        </div>
+    </div>
+
+    <!-- Toast -->
+    <div class="toast" id="toast"></div>
+
+    <!-- Congratulations Overlay -->
+    <div class="congrats-overlay" id="congratsOverlay">
+        <div class="congrats-message">
+            Enjoy your BUY NOW PAY LATER eBIKE
+        </div>
+    </div>
+
+    <!-- Flying Image Container -->
+    <div id="flyingImageContainer"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
