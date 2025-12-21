@@ -236,9 +236,9 @@ function checkout() {
     const congratsMessage = congratsOverlay.querySelector('.congrats-message');
     
     if (buyNowPayLater) {
-        congratsMessage.textContent = 'Enjoy BUY NOW PAY LATER eBIKE';
+        congratsMessage.textContent = 'Enjoy BUY NOW PAY LATER eBIKE 🚴⚡';
     } else {
-        congratsMessage.textContent = 'Congratulations! Your eBike is on the way! 🚴⚡';
+        congratsMessage.textContent = 'Enjoy your new eBike 🚴⚡';
     }
     
     congratsOverlay.classList.add('show');
