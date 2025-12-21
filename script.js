@@ -46,7 +46,7 @@ function renderProducts() {
             <div class="product-info">
                 <h3>${product.name}</h3>
                 <button class="add-to-cart-btn" onclick="addToCart(${product.id}, this)">
-                    Add to Cart
+                    ✅
                 </button>
             </div>
         </div>
