@@ -6,7 +6,8 @@
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(135deg, #0a1929 0%, #1a2332 50%, #0d1b2a 100%);
+    /* Deep forest + warm wood gradient */
+    background: linear-gradient(135deg, #3b2a1a 0%, #5a3b25 50%, #2f3b2f 100%);
     min-height: 100vh;
 }
 
@@ -16,12 +17,12 @@ body {
     top: 0;
     left: 0;
     right: 0;
-    background: rgba(10, 25, 41, 0.95);
+    background: rgba(30, 22, 16, 0.95);
     backdrop-filter: blur(20px);
-    box-shadow: 0 4px 30px rgba(0, 170, 255, 0.2);
+    box-shadow: 0 4px 30px rgba(66, 48, 29, 0.4);
     z-index: 1000;
     padding: 15px 20px;
-    border-bottom: 2px solid rgba(0, 170, 255, 0.3);
+    border-bottom: 2px solid rgba(186, 140, 99, 0.6); /* wood tone #BA8C63 [web:5] */
 }
 
 .header-content {
@@ -37,38 +38,38 @@ body {
     height: 45px;
     border-radius: 50%;
     object-fit: cover;
-    border: 3px solid #00aaff;
+    border: 3px solid #BA8C63; /* wood [web:5] */
     cursor: pointer;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .profile-img:hover {
     transform: scale(1.1);
-    box-shadow: 0 0 20px rgba(0, 170, 255, 0.8);
+    box-shadow: 0 0 20px rgba(186, 140, 99, 0.8); /* wood [web:5] */
 }
 
 .cart-icon {
     position: relative;
     cursor: pointer;
     padding: 12px;
-    background: linear-gradient(135deg, #00aaff 0%, #0077cc 100%);
+    background: linear-gradient(135deg, #8B5A2B 0%, #5C3A21 100%);
     border-radius: 50%;
     transition: all 0.3s ease;
     color: white;
-    box-shadow: 0 4px 20px rgba(0, 170, 255, 0.4);
+    box-shadow: 0 4px 20px rgba(91, 63, 44, 0.6);
 }
 
 .cart-icon:hover {
     transform: scale(1.1);
-    box-shadow: 0 8px 30px rgba(0, 170, 255, 0.6);
-    background: linear-gradient(135deg, #ff6b35 0%, #ff4500 100%);
+    box-shadow: 0 8px 30px rgba(91, 63, 44, 0.8);
+    background: linear-gradient(135deg, #A67B5C 0%, #6D9775 100%); /* beige + green [web:13] */
 }
 
 .cart-badge {
     position: absolute;
     top: -5px;
     right: -5px;
-    background: linear-gradient(135deg, #ff6b35 0%, #ff4500 100%);
+    background: linear-gradient(135deg, #A67B5C 0%, #8B4513 100%); /* café au lait + sienna [web:13][web:18] */
     color: white;
     font-size: 0.75rem;
     font-weight: bold;
@@ -76,7 +77,7 @@ body {
     border-radius: 20px;
     min-width: 22px;
     text-align: center;
-    box-shadow: 0 4px 15px rgba(255, 107, 53, 0.5);
+    box-shadow: 0 4px 15px rgba(166, 123, 92, 0.7); /* [web:13] */
 }
 
 .cart-icon.shake {
@@ -102,11 +103,11 @@ body {
     font-size: 2.5rem;
     font-weight: 800;
     margin-bottom: 40px;
-    background: linear-gradient(135deg, #00aaff 0%, #00ff88 100%);
+    background: linear-gradient(135deg, #BA8C63 0%, #C8B282 50%, #6D9775 100%); /* wood + beige + sage green [web:5][web:13] */
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    text-shadow: 0 0 40px rgba(0, 170, 255, 0.3);
+    text-shadow: 0 0 40px rgba(186, 140, 99, 0.4); /* [web:5] */
 }
 
 /* Products Grid */
@@ -122,24 +123,24 @@ body {
         grid-template-columns: repeat(2, 1fr);
         gap: 15px;
     }
-    
+
     .section-title {
         font-size: 1.8rem;
         margin-bottom: 25px;
     }
-    
+
     .main-content {
         padding: 90px 15px 30px;
     }
-    
+
     .product-card {
         padding: 10px;
     }
-    
+
     .product-card h3 {
         font-size: 0.9rem;
     }
-    
+
     .add-to-cart-btn {
         padding: 10px 15px;
         font-size: 0.8rem;
@@ -147,15 +148,15 @@ body {
 }
 
 .product-card {
-    background: linear-gradient(135deg, rgba(26, 35, 50, 0.95) 0%, rgba(13, 27, 42, 0.95) 100%);
+    background: linear-gradient(135deg, rgba(60, 44, 30, 0.95) 0%, rgba(41, 33, 25, 0.95) 100%);
     border-radius: 20px;
     overflow: hidden;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
     transition: all 0.4s ease;
     opacity: 0;
     transform: translateY(50px);
     padding: 15px;
-    border: 2px solid rgba(0, 170, 255, 0.2);
+    border: 2px solid rgba(186, 140, 99, 0.3); /* [web:5] */
 }
 
 .product-card.visible {
@@ -165,11 +166,12 @@ body {
 
 .product-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 20px 60px rgba(0, 170, 255, 0.4);
-    border-color: rgba(0, 170, 255, 0.5);
+    box-shadow: 0 20px 60px rgba(48, 35, 23, 0.8);
+    border-color: rgba(186, 140, 99, 0.7); /* [web:5] */
 }
 
-/* Electric blue highlight wrapper for selected products */
+/* Electric wood highlight wrapper for selected products */
+/* Electric wood highlight wrapper for selected products */
 .product-image-wrapper {
     position: relative;
     border-radius: 15px;
@@ -178,9 +180,10 @@ body {
 }
 
 .product-image-wrapper.selected {
-    background: rgba(0, 170, 255, 0.15);
-    box-shadow: inset 0 0 0 4px rgba(0, 170, 255, 0.6), 0 4px 20px rgba(0, 170, 255, 0.5);
+    background: transparent;
+    box-shadow: none;
 }
+
 
 .product-image {
     width: 100%;
@@ -203,15 +206,15 @@ body {
 .product-info h3 {
     font-size: 1.1rem;
     font-weight: 700;
-    color: #ffffff;
+    color: #F5F0E6;
     margin-bottom: 15px;
-    text-shadow: 0 2px 10px rgba(0, 170, 255, 0.3);
+    text-shadow: 0 2px 10px rgba(48, 35, 23, 0.7);
 }
 
 .add-to-cart-btn {
     width: 100%;
     padding: 12px 20px;
-    background: linear-gradient(135deg, #00aaff 0%, #0077cc 100%);
+    background: linear-gradient(135deg, #8B5A2B 0%, #6B4423 100%); /* wood browns [web:18] */
     color: white;
     border: none;
     border-radius: 12px;
@@ -219,13 +222,13 @@ body {
     font-weight: 600;
     cursor: pointer;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(0, 170, 255, 0.3);
+    box-shadow: 0 4px 15px rgba(60, 44, 30, 0.6);
 }
 
 .add-to-cart-btn:hover {
     transform: scale(1.05);
-    box-shadow: 0 8px 25px rgba(0, 170, 255, 0.5);
-    background: linear-gradient(135deg, #ff6b35 0%, #ff4500 100%);
+    box-shadow: 0 8px 25px rgba(60, 44, 30, 0.8);
+    background: linear-gradient(135deg, #A67B5C 0%, #417154 100%); /* beige + green [web:13] */
 }
 
 .add-to-cart-btn:active {
@@ -235,7 +238,7 @@ body {
 /* Moving line along the borders of the first product */
 .product-card[data-id="1"] {
     position: relative;
-    border: 2px solid rgba(0, 170, 255, 0.3);
+    border: 2px solid rgba(186, 140, 99, 0.6); /* [web:5] */
     overflow: visible;
 }
 
@@ -248,17 +251,17 @@ body {
     bottom: -2px;
     border-radius: 20px;
     padding: 2px;
-    background: linear-gradient(90deg, 
-        transparent 0%, 
-        transparent 40%, 
-        #00aaff 45%, 
-        #00ff88 50%, 
-        #ff6b35 55%, 
-        transparent 60%, 
+    background: linear-gradient(90deg,
+        transparent 0%,
+        transparent 40%,
+        #A67B5C 45%,  /* beige brown [web:13] */
+        #6D9775 50%,  /* muted green [web:13] */
+        #8B4513 55%,  /* rich sienna [web:18] */
+        transparent 60%,
         transparent 100%);
     background-size: 400% 100%;
-    -webkit-mask: 
-        linear-gradient(#fff 0 0) content-box, 
+    -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
         linear-gradient(#fff 0 0);
     -webkit-mask-composite: xor;
     mask-composite: exclude;
@@ -283,7 +286,7 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(10, 7, 4, 0.85);
     opacity: 0;
     visibility: hidden;
     transition: all 0.3s ease;
@@ -302,13 +305,13 @@ body {
     width: 100%;
     max-width: 400px;
     height: 100%;
-    background: linear-gradient(135deg, #0a1929 0%, #1a2332 100%);
-    box-shadow: -10px 0 50px rgba(0, 170, 255, 0.3);
+    background: linear-gradient(135deg, #3b2a1a 0%, #2b241d 100%);
+    box-shadow: -10px 0 50px rgba(47, 35, 24, 0.8);
     transition: right 0.4s ease;
     z-index: 1002;
     display: flex;
     flex-direction: column;
-    border-left: 2px solid rgba(0, 170, 255, 0.3);
+    border-left: 2px solid rgba(186, 140, 99, 0.6); /* [web:5] */
 }
 
 .cart-drawer.active {
@@ -320,13 +323,13 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 25px;
-    border-bottom: 2px solid rgba(0, 170, 255, 0.3);
+    border-bottom: 2px solid rgba(186, 140, 99, 0.6); /* [web:5] */
 }
 
 .cart-header h2 {
     font-size: 1.5rem;
     font-weight: 800;
-    background: linear-gradient(135deg, #00aaff 0%, #00ff88 100%);
+    background: linear-gradient(135deg, #BA8C63 0%, #D0C59A 50%, #417154 100%); /* wood + vanilla + green [web:5][web:13] */
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -337,12 +340,12 @@ body {
     border: none;
     font-size: 2rem;
     cursor: pointer;
-    color: #00aaff;
+    color: #BA8C63; /* [web:5] */
     transition: color 0.3s ease;
 }
 
 .close-btn:hover {
-    color: #ff6b35;
+    color: #8B4513; /* sienna [web:18] */
 }
 
 .cart-items {
@@ -355,11 +358,11 @@ body {
     display: flex;
     gap: 15px;
     padding: 15px;
-    background: rgba(26, 35, 50, 0.8);
+    background: rgba(48, 35, 23, 0.9);
     border-radius: 15px;
     margin-bottom: 15px;
     align-items: center;
-    border: 1px solid rgba(0, 170, 255, 0.25);
+    border: 1px solid rgba(186, 140, 99, 0.5); /* [web:5] */
 }
 
 .cart-item img {
@@ -376,7 +379,7 @@ body {
 .cart-item-info h4 {
     font-size: 1rem;
     font-weight: 600;
-    color: #ffffff;
+    color: #FDF7EC;
     margin-bottom: 10px;
 }
 
@@ -390,7 +393,7 @@ body {
     width: 30px;
     height: 30px;
     border: none;
-    background: linear-gradient(135deg, #00aaff 0%, #0077cc 100%);
+    background: linear-gradient(135deg, #8B5A2B 0%, #5C3A21 100%);
     color: white;
     border-radius: 8px;
     font-size: 1.2rem;
@@ -400,20 +403,20 @@ body {
 
 .qty-btn:hover {
     transform: scale(1.1);
-    background: linear-gradient(135deg, #ff6b35 0%, #ff4500 100%);
+    background: linear-gradient(135deg, #A67B5C 0%, #6D9775 100%); /* [web:13] */
 }
 
 .quantity {
     font-weight: 600;
     min-width: 30px;
     text-align: center;
-    color: #ffffff;
+    color: #F5F0E6;
 }
 
 .remove-btn {
     background: none;
     border: none;
-    color: #ff6b35;
+    color: #A67B5C; /* [web:13] */
     cursor: pointer;
     font-size: 1.5rem;
     transition: transform 0.2s ease;
@@ -421,12 +424,12 @@ body {
 
 .remove-btn:hover {
     transform: scale(1.2);
-    color: #ff4500;
+    color: #8B4513; /* [web:18] */
 }
 
 .cart-footer {
     padding: 20px 25px;
-    border-top: 2px solid rgba(0, 170, 255, 0.3);
+    border-top: 2px solid rgba(186, 140, 99, 0.6); /* [web:5] */
 }
 
 .payment-option {
@@ -435,22 +438,22 @@ body {
     gap: 10px;
     margin-bottom: 20px;
     padding: 15px;
-    background: rgba(0, 170, 255, 0.1);
+    background: rgba(166, 123, 92, 0.15); /* [web:13] */
     border-radius: 12px;
-    border: 2px solid rgba(0, 170, 255, 0.3);
+    border: 2px solid rgba(186, 140, 99, 0.6); /* [web:5] */
 }
 
 .payment-option input[type="checkbox"] {
     width: 20px;
     height: 20px;
     cursor: pointer;
-    accent-color: #00aaff;
+    accent-color: #A67B5C; /* [web:13] */
 }
 
 .payment-option label {
     font-size: 1rem;
     font-weight: 600;
-    color: #00aaff;
+    color: #F5F0E6;
     cursor: pointer;
     user-select: none;
 }
@@ -458,7 +461,7 @@ body {
 .checkout-btn {
     width: 100%;
     padding: 18px;
-    background: linear-gradient(135deg, #00aaff 0%, #0077cc 100%);
+    background: linear-gradient(135deg, #6D9775 0%, #417154 100%); /* earthy greens [web:13] */
     color: white;
     border: none;
     border-radius: 15px;
@@ -466,19 +469,19 @@ body {
     font-weight: 700;
     cursor: pointer;
     transition: all 0.3s ease;
-    box-shadow: 0 6px 25px rgba(0, 170, 255, 0.4);
+    box-shadow: 0 6px 25px rgba(23, 39, 30, 0.8);
 }
 
 .checkout-btn:hover {
     transform: scale(1.02);
-    box-shadow: 0 10px 35px rgba(0, 170, 255, 0.6);
-    background: linear-gradient(135deg, #ff6b35 0%, #ff4500 100%);
+    box-shadow: 0 10px 35px rgba(23, 39, 30, 0.9);
+    background: linear-gradient(135deg, #A67B5C 0%, #8B5A2B 100%); /* brownish [web:13][web:18] */
 }
 
 .empty-cart {
     text-align: center;
     padding: 40px;
-    color: #00aaff;
+    color: #C8B282; /* light beige [web:13] */
 }
 
 .empty-cart svg {
@@ -494,13 +497,13 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) scale(0);
-    background: linear-gradient(135deg, #00aaff 0%, #0077cc 100%);
+    background: linear-gradient(135deg, #8B5A2B 0%, #6B4423 100%);
     color: white;
     padding: 20px 40px;
     border-radius: 15px;
     font-weight: 600;
     font-size: 1.1rem;
-    box-shadow: 0 10px 40px rgba(0, 170, 255, 0.6);
+    box-shadow: 0 10px 40px rgba(48, 35, 23, 0.8);
     transition: transform 0.4s ease;
     z-index: 3000;
 }
@@ -516,7 +519,7 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.9);
+    background: rgba(10, 7, 4, 0.9);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -536,7 +539,7 @@ body {
     font-weight: 900;
     text-align: center;
     padding: 40px 60px;
-    background: linear-gradient(135deg, #00aaff 0%, #00ff88 50%, #ff6b35 100%);
+    background: linear-gradient(135deg, #BA8C63 0%, #D0C59A 50%, #6D9775 100%); /* earthy gradient [web:5][web:13] */
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -547,10 +550,10 @@ body {
 
 @keyframes glow {
     from {
-        filter: brightness(1) drop-shadow(0 0 30px rgba(0, 170, 255, 0.6));
+        filter: brightness(1) drop-shadow(0 0 30px rgba(91, 63, 44, 0.9));
     }
     to {
-        filter: brightness(1.4) drop-shadow(0 0 50px rgba(0, 255, 136, 0.8));
+        filter: brightness(1.3) drop-shadow(0 0 50px rgba(166, 123, 92, 0.9)); /* [web:13] */
     }
 }
 
@@ -579,7 +582,7 @@ body {
     height: 80px;
     object-fit: cover;
     border-radius: 50%;
-    box-shadow: 0 10px 40px rgba(0, 170, 255, 0.7);
+    box-shadow: 0 10px 40px rgba(91, 63, 44, 0.9);
     pointer-events: none;
     z-index: 9999;
     transition: all 0.8s cubic-bezier(0.2, 1, 0.3, 1);
@@ -609,7 +612,7 @@ body.cart-open {
     .cart-drawer {
         transform: translateX(100%);
     }
-    
+
     .cart-drawer.active {
         transform: translateX(0);
     }
@@ -642,11 +645,11 @@ html, body {
     .products-grid {
         width: 100%;
     }
-    
+
     .main-content {
         width: 100%;
     }
-    
+
     body {
         overflow-x: hidden;
     }
