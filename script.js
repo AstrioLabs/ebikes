@@ -10,11 +10,14 @@ const products = [
     { id: 8, name: "Performance eBike", image: "images/performance.jpg" }
 ];
 
+
 // Cart State
 let cart = JSON.parse(localStorage.getItem('cart')) || [];
 
+
 // Track which items have been highlighted
 let highlightedItems = JSON.parse(localStorage.getItem('highlightedItems')) || [];
+
 
 // Initialize
 document.addEventListener('DOMContentLoaded', () => {
@@ -23,6 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
     observeProducts();
     restoreHighlights();
 });
+
 
 // Restore highlights for items that were previously added
 function restoreHighlights() {
@@ -34,6 +38,7 @@ function restoreHighlights() {
         }
     });
 }
+
 
 // Render Products
 function renderProducts() {
@@ -52,6 +57,7 @@ function renderProducts() {
         </div>
     `).join('');
 }
+
 
 // Fly to Cart Animation
 function flyToCart(productId, buttonElement) {
@@ -84,6 +90,7 @@ function flyToCart(productId, buttonElement) {
         flyingImg.remove();
     }, 800);
 }
+
 
 // Add to Cart
 function addToCart(productId, buttonElement) {
@@ -119,6 +126,7 @@ function addToCart(productId, buttonElement) {
     }
 }
 
+
 // Remove from Cart
 function removeFromCart(productId) {
     cart = cart.filter(item => item.id !== productId);
@@ -139,6 +147,7 @@ function removeFromCart(productId) {
     renderCartItems();
 }
 
+
 // Update Quantity
 function updateQuantity(productId, change) {
     const item = cart.find(item => item.id === productId);
@@ -154,10 +163,12 @@ function updateQuantity(productId, change) {
     }
 }
 
+
 // Save Cart to LocalStorage
 function saveCart() {
     localStorage.setItem('cart', JSON.stringify(cart));
 }
+
 
 // Update Cart Badge
 function updateCartBadge() {
@@ -167,12 +178,14 @@ function updateCartBadge() {
     badge.style.display = totalItems > 0 ? 'block' : 'none';
 }
 
+
 // Shake Cart Animation
 function shakeCart() {
     const cartIcon = document.getElementById('cartIcon');
     cartIcon.classList.add('shake');
     setTimeout(() => cartIcon.classList.remove('shake'), 500);
 }
+
 
 // Open Cart
 function openCart() {
@@ -182,12 +195,14 @@ function openCart() {
     renderCartItems();
 }
 
+
 // Close Cart
 function closeCartDrawer() {
     document.getElementById('cartDrawer').classList.remove('active');
     document.getElementById('cartOverlay').classList.remove('active');
     document.body.classList.remove('cart-open');
 }
+
 
 // Render Cart Items
 function renderCartItems() {
@@ -222,6 +237,7 @@ function renderCartItems() {
         </div>
     `).join('');
 }
+
 
 // Checkout - Show Congratulations Message
 function checkout() {
@@ -264,6 +280,7 @@ function checkout() {
         congratsOverlay.classList.remove('show');
     }, 4000);
 }
+
 
 // Scroll Animation Observer
 function observeProducts() {
