@@ -252,9 +252,9 @@ function checkout() {
     const congratsMessage = congratsOverlay.querySelector('.congrats-message');
     
     if (buyNowPayLater) {
-        congratsMessage.textContent = 'Enjoy BUY NOW PAY LATER eBIKE 🚴⚡';
+        congratsMessage.textContent = 'Learn broadly about Equipment Testing Services! 🚴⚡';
     } else {
-        congratsMessage.textContent = 'Enjoy your new eBike 🚴⚡';
+        congratsMessage.textContent = 'Learn broadly about Equipment Testing Services! 🚴⚡';
     }
     
     congratsOverlay.classList.add('show');
